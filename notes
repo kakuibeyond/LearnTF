@@ -28,4 +28,4 @@ tf支持的14种类型：
 布尔型(tf.bool)
 复数(tf.complex64,tf.complex128)
 
-tf运行模型——会话
+tf运行模型——会话(Session)
