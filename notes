@@ -29,3 +29,17 @@ tf支持的14种类型：
 复数(tf.complex64,tf.complex128)
 
 tf运行模型——会话(Session)
+会话拥有并管理tf程序运行时的所有资源，计算完成后需要关闭来回收资源（防止资源泄露）
+会话模式两种：
+1.明确调用会话生成函数和关闭会话函数
+#创建
+sess=tf.Session()
+#得到运行结果
+sess.run(……)
+#关闭会话
+sess.close()
+2.使用上下文管理器来使用会话
+with tf.Session() as sess:
+    #计算结果
+    sess.run(……)
+#不需要手动关闭
